@@ -258,7 +258,7 @@ with DAG(
         dag=dag,
     )
 
-collect_from_db >> collect_from_api >>  move_to_dwh_task
+collect_from_db_task >> collect_from_api_task >>  move_to_dwh_task
 
 if __name__ == "__main__":
     dag.cli()
